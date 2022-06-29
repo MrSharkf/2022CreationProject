@@ -1,0 +1,19 @@
+/**index.wxss**/
+.input-wrap {
+  display: flex;
+  flex-direction: row;
+
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.info-input {
+  border-bottom: 2rpx solid #000000;
+  width: 200rpx;
+
+  text-align: center;
+}
+
+.login {
+  margin-top: 60rpx;
+}
