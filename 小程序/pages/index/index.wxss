@@ -1,0 +1,33 @@
+image{width: 100%;}
+navigator  {
+  width: 100%;
+  padding: 10rpx;
+  display: flex;
+  flex: 0.5;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: black;
+  text-align: end;
+  font-size: 50rpx;
+  position:static
+}
+navigator image{
+  width: 50%;
+  display:block
+}
+.A{
+  position: absolute;
+top: 333rpx; left: 30rpx;
+}
+.B{
+  position: absolute;
+top: 333rpx; right: 30rpx;
+}
+.C{
+  position: absolute;
+top: 590rpx; left: 30rpx;
+}
+.D{
+  position: absolute;
+top: 590rpx; right: 30rpx;
+}

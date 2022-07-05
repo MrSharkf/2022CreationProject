@@ -1,0 +1,25 @@
+<image mode="widthFix" src="https://s6.jpg.cm/2022/07/05/PW8Mak.png" ></image>
+<view class="A" style="width:45%;height: auto;background-color: #B2BE06;margin-top: 00rpx;border-radius: 30rpx;">
+  <navigator open-type="reLaunch"
+    url="/pages/category/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/04/PW6KxW.png"></image>
+    <text >喂养指南</text>
+  </navigator></view>
+<view  class="B" style="width:45%;height: auto;background-color: #F0A06B;margin-top: 00rpx;border-radius: 30rpx;">
+  <navigator open-type="reLaunch"
+    url="/pages/category/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/04/PW62IQ.png" ></image>
+    <text>膳食记录</text>
+  </navigator></view>
+<view  class="C" style="width:45%;height: auto;background-color: #E75820;margin-top: 00rpx;border-radius: 30rpx;">
+  <navigator open-type="reLaunch"
+    url="/pages/category/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/04/PW63ch.png" ></image>
+    <text>智能推荐</text>
+  </navigator></view>
+<view  class="D" style="width:45%;height: auto;background-color: #ECBF2E;margin-top: 00rpx;border-radius: 30rpx;">
+  <navigator open-type="reLaunch"
+    url="/pages/category/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/04/PW6CwS.png" ></image>
+    <text>分析报告</text>
+  </navigator></view>
