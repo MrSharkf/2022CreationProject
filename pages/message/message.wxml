@@ -1,23 +1,2 @@
 <!--pages/message/message.wxml-->
-
-<view class="centerbox">
-
-  <text class="txt40">{{message}}</text>
-
-  <button bindtap="showVideo" class="videocontrol">展示视频</button>
-  
-  <video  id="myVideo"  hidden="{{!showVideo}}" src="{{sourceOfVideo}}" bindplay="btnVideoPlay" bindpause="btnVideoPause">
-  </video>
-
-  <view wx:if="{{showVideo}}" id="btn">
-    <view bindtap="btnVideoPlay">
-        <image src="{{videoOnPlay?'/image/exercisePlay_pause.png':'/image/exercisePlay_play.png'}}" mode="aspectFit" />
-        <text>{{videoOnPlay?"暂停":"播放"}}</text>
-    </view>
-    <view bindtap="btnVideoPause">
-        <image src="/image/exercisePlay_pause.png" mode="aspectFit" />
-        <text>暂停</text>
-    </view>
-  </view>
-
-</view>
+<text>pages/message/message.wxml</text>
