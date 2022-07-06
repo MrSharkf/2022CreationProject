@@ -7,6 +7,6 @@
     <button class="authorize" open-type="getUserInfo" bindgetuserinfo="onAuthorize" wx:else>
       授权登录
     </button>
-    <view class="statistics">你的总累计时间为 {{wholeTime}}</view>
+    <view class="statistics" bindtap="">你的总累计时间为 {{wholeTime}}</view>
   </view>
 </view>

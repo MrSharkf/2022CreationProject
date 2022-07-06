@@ -1,3 +1,8 @@
+import HomeModel from '../../models/home'
+import { showToast } from '../../utils/UIUtil'
+
+
+const globalEnv = getApp()
 Page({
   data: {
     pieOpt: {},
@@ -8,9 +13,6 @@ Page({
     isPieInited: false,
     isCreating: false,
     isUploading: false,
-    timerGoalTitle: '',
-    timer: '00:00:00',
-    timerState: null
   },
 
   onLoad() {
@@ -27,10 +29,9 @@ Page({
         }
       })
       .then(() => {
-        this.getGoalList()
+        
       })
 
-    this.setTimerTips()
   },
 
   /**
@@ -45,20 +46,7 @@ Page({
   },
 
   onReady() {
-    const $chart = this.selectComponent('#chart')
-    $chart.init((canvas, width, height) => {
-      const chart = echarts.init(canvas, null, {
-        width,
-        height
-      })
-      canvas.setChart(chart)
-      this.pie = chart
-      this.data.isPieInited = true
-      if (this.data.isDataLoaded) {
-        this.updatePieOption()
-      }
-      return chart
-    })
+  
   },
 
   onShareAppMessage() {
@@ -67,99 +55,7 @@ Page({
     }
   },
 
-  onCreateGoal() {
-    if (!this.data.userInfo) {
-      showToast('请先授权登录')
-      return
-    }
-    this.setData({
-      isCreating: true
-    })
-  },
 
-  onCancelCreate() {
-    this.setData({
-      isCreating: false
-    })
-  },
-
-  onAddGoal(e) {
-    const goalTitle = e.detail
-    if (!goalTitle.length) {
-      showToast('标题不能为空')
-      return
-    }
-
-    if (this.data.isUploading) {
-      return
-    }
-
-    this.data.isUploading = true
-    HomeModel.addGoal(globalEnv.data.userId, goalTitle).then(
-      res => {
-        this.setData({
-          isCreating: false
-        })
-        this.data.isUploading = false
-        showToast('创建成功', true)
-        this.getGoalList()
-      },
-      err => {
-        this.setData({
-          isCreating: false,
-          isUploading: false
-        })
-        showToast('创建失败')
-      }
-    )
-  },
-
-  onGoalClick(e) {
-    const { goalId } = e.currentTarget.dataset
-
-    wx.navigateTo({
-      url: `/pages/detail/index?id=${goalId}`
-    })
-  },
-
-  onJumpToTimerPage() {
-    wx.navigateTo({
-      url: '/pages/timer/index'
-    })
-  },
-
-  setTimerTips() {
-    const timerInfo = globalEnv.data
-    let stateDesc = ''
-
-    switch (timerInfo.timerState) {
-      case TimerState.NONE:
-        stateDesc = ''
-        break
-      case TimerState.PAUSE:
-        stateDesc = '暂停中'
-        this.setData({
-          timer: formatDurationToTimer(timerInfo.duration),
-          timerGoalId: timerInfo.goalId
-        })
-        break
-      case TimerState.ONGOING:
-        stateDesc = '进行中'
-        this.setData({
-          timer: formatDurationToTimer(timerInfo.duration)
-        })
-        globalEnv.startTimer(null, null, duration => {
-          this.setData({
-            timer: formatDurationToTimer(duration),
-            timerGoalId: timerInfo.goalId
-          })
-        })
-    }
-    this.setData({
-      timerState: stateDesc,
-      timerGoalTitle: timerInfo.goalTitle
-    })
-  },
 
   initUserInfo() {
     HomeModel.getUserInfo().then(
@@ -213,41 +109,5 @@ Page({
         }
       )
     })
-  },
-
-  getGoalList() {
-    HomeModel.getGoalList(globalEnv.data.userId).then(
-      res => {
-        if (!res.result) {
-          this.setData({
-            goalList: []
-          })
-          return
-        }
-        const formattedData = HomeModel.formatGoalList(res.result.data)
-        this.setData({
-          goalList: formattedData.list,
-          wholeTime: formattedData.wholeTime
-        })
-
-        this.data.isDataLoaded = true
-        if (this.data.isPieInited) {
-          this.updatePieOption()
-        }
-      },
-      err => {
-        showToast('获取目标列表失败')
-      }
-    )
-  },
-
-  updatePieOption() {
-    const data = HomeModel.serializeForChart(this.data.goalList)
-    const { min, max, list } = data
-    const option = pieOptions
-    option.visualMap.min = min
-    option.visualMap.max = max
-    option.series[0].data = list
-    this.pie.setOption(option)
   }
 })
