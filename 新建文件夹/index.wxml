@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="all">
+  <image class="bg2" src="../../img/a.jpg"></image>
+  <image class="bg" src="../../img/bg.png"></image>
+  <button class="b1" bindtap="goToPage1">喂养指南</button>
+  <button class="b2" bindtap="goToPage2">膳食记录</button>
+  <button class="b3" bindtap="goToPage3">智能推荐</button>
+  <button class="b4" bindtap="goToPage4">分析报告</button>
+</view>

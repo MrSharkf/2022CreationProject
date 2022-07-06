@@ -1,0 +1,37 @@
+/**index.wxss**/
+.all{
+  position: relative;
+}
+.bg2{
+  height:180px;
+}
+.bg{
+  height: 380px;
+  position: absolute;
+  top:180px;
+  left:18px;
+}
+.b1{
+  font-size:15px;
+  position: absolute;
+  top:220px;
+  left:-18px;
+}
+.b2{
+  font-size:15px;
+  position: absolute;
+  top:380px;
+  left:-18px;
+}
+.b3{
+  font-size:15px;
+  position: absolute;
+  top:250px;
+  right:-18px;
+}
+.b4{
+  font-size:15px;
+  position: absolute;
+  top:430px;
+  right:-18px;
+}
