@@ -41,10 +41,48 @@ margin-top: 10px;
   background-color: burlywood;
   border: 5px solid #FFFFFF;
 }
+.user-info-container {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 33%;
+  margin-top: 32rpx;
+}
 
+.user-info-container .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border: 5rpx solid white;
+  border-radius: 50%;
+  box-shadow: 0 6rpx 16rpx rgba(25, 118, 210, 0.1);
+}
+.info {
+  margin-left: 33%;
+  color: black;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+
+.info > .name {
+  color: #1976d2;
+  font-weight: bold;
+  font-size: inherit;
+}
+.authorize {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 25%;
+  padding: 10rpx 36rpx;
+  border-radius: 36rpx;
+  background-color: #ffee58;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 26rpx;
+  line-height: 28rpx;
+}
 .tableContainer
 {
-  margin-top: 150rpx;
+  margin-top: 50rpx;
   margin-left: 100rpx;
 }
 
