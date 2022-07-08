@@ -1,3 +1,4 @@
+
 import HomeModel from '../../models/home'
 import { showToast } from '../../utils/UIUtil'
 
@@ -76,11 +77,11 @@ Page({
       HomeModel.getOpenIdAndUserId().then(
         res => {
           const idData = res.result
-          globalEnv.data.openid = idData.openId
-          if (idData.userId) {
-            globalEnv.data.userId = idData.userId
+          //globalEnv.data.openid = idData.openId
+         if (idData.userId){
+            //globalEnv.data.userId = idData.userId
             resolve()
-          } else {
+         } else {
             reject(0)
           }
         },
@@ -97,10 +98,11 @@ Page({
   },
 
   initUserId() {
+    showToast(`欢迎使用，请先完善宝宝信息`)
     return new Promise((resolve, reject) => {
       HomeModel.addUserId().then(
         res => {
-          globalEnv.data.userId = res._id
+          //globalEnv.data.userId = res._id
           resolve()
         },
         err => {

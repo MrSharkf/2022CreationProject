@@ -1,4 +1,8 @@
 // pages/profile/profile.js
+
+import BodydataModel from '../../models/bodydata'
+
+
 Page({
 
   /**
@@ -8,7 +12,12 @@ Page({
     disabled:true,
     btnstate:"default",
     switchChecked:false,
-    date:'2015-01-01'
+    userInfo: null,
+    babyname:null, 
+    birthdate:'2020-01-01', 
+    gender:'null', 
+    height:null, 
+    weight:null
   },
 
   /**
@@ -65,5 +74,70 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  onAuthorize(e) {
+    if (e.detail.userInfo) {
+      this.setData({
+        userInfo: e.detail.userInfo
+      })
+    }
+  },
+  genderChange(e){
+    this.setData({
+      gender: e.detail.value
+    })
+  },
+  babyNameSet(e){
+    this.setData({
+      babyname: e.detail.value
+    })
+  },
+  birthdatechange(e){
+    this.setData({
+      birthdate: e.detail.value
+    })
+  },
+  heightSet(e){
+    this.setData({
+      height: e.detail.value
+    })
+  },
+  weightSet(e){
+    this.setData({
+      weight: e.detail.value
+    })
+  },
+
+  register(){
+   //if(babyname&&birthdate&&gender&&height&&weight){
+      BodydataModel.updateUserInfo(this.data.babyname, 
+        this.data.birthdate, 
+        this.data.gender, 
+        this.data.height, 
+        this.data.weight).then(
+          res => {
+            wx.showToast({
+              title: '修改成功！',
+              icon: 'success',
+              duration: 2000
+            })
+          },
+          err => {
+            console.log(err)
+            wx.showToast({
+              title: '修改失败',
+              icon:'error',
+              duration: 2000
+            })
+          }
+        )
+  // }else{
+      wx.showToast({
+        title:'请完善宝宝信息！',
+        icon:'error',
+        duration: 2000
+      })
+   // }
+    
   }
 })
