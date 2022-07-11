@@ -1,5 +1,6 @@
 // pages/profile/profile.js
 
+
 import BodydataModel from '../../models/bodydata'
 
 
@@ -24,6 +25,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    wx.getUserInfo({
+      success: res=>{
+        this.setData({
+          userInfo:res.userInfo
+        })
+      },
+      fail: err => {
+        wx.showToast({
+          title: err,
+          duration:2000
+        })
+      }
+    })
 
   },
 
@@ -32,13 +46,14 @@ Page({
    */
   onReady() {
 
+   
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    
   },
 
   /**
@@ -109,7 +124,7 @@ Page({
   },
 
   register(){
-   //if(babyname&&birthdate&&gender&&height&&weight){
+   if(this.data.babyname&&this.data.birthdate&&this.data.gender&&this.data.height&&this.data.weight){
       BodydataModel.updateUserInfo(this.data.babyname, 
         this.data.birthdate, 
         this.data.gender, 
@@ -126,18 +141,18 @@ Page({
             console.log(err)
             wx.showToast({
               title: '修改失败',
-              icon:'error',
+              icon:'none',
               duration: 2000
             })
           }
         )
-  // }else{
+   }else{
       wx.showToast({
         title:'请完善宝宝信息！',
-        icon:'error',
+        icon:'none',
         duration: 2000
       })
-   // }
+    }
     
   }
 })
