@@ -1,0 +1,56 @@
+<!--pages/record/record.wxml-->
+<view><image src="../images/icon/leftarrow.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/></view>
+
+<view><image src="../images/icon/search.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
+
+<view class="head">
+  <view>母乳记录添加</view>
+</view>
+
+<view class="title">
+  <view>标题</view>
+</view>
+
+<view>
+  <input class="inputTitle"/>
+</view>
+
+<view class="date">
+  <view>日期</view>
+</view>
+
+<view>
+  <picker name="pickerdate" class="pickerdate" mode="date" value="{{date}}" start="2022-07-01"
+  end="2077-07-07" bindchange="bindDateChange">   {{date}}
+  </picker>
+</view>
+
+<view class="begin">
+  <view>开始时间</view>
+</view>
+
+<view>
+  <picker name="pickertimebegin" class="pickertimebegin" mode="time" value="{{time1}}" start="00:00"
+  end="23:59" bindchange="bindTimeChange1">   {{time1}}
+  </picker>
+</view>
+
+<view class="end">
+  <view>结束时间</view>
+</view>
+
+<view>
+  <picker name="pickertimeend" class="pickertimeend" mode="time" value="{{time2}}" start="00:00"
+  end="23:59" bindchange="bindTimeChange2">   {{time2}}
+  </picker>
+</view>
+
+<view class="capacity">
+  <view>容量</view>
+</view>
+
+<view>
+  <input class="inputCapacity"/>
+</view>
+
+<button id="confirm"  disabled="{{isDisabled}}">确定</button>

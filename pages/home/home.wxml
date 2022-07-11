@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<button bindtap="navigate1">前往profile</button>
+<button bindtap="navigate2">前往feed</button>
+<button bindtap="navigate3">前往record</button>

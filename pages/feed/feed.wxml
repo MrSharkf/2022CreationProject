@@ -1,0 +1,48 @@
+<!--pages/feed/feed.wxml-->
+<view><image src="../images/icon/menu.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/></view>
+
+
+<view><image src="../images/icon/search.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
+
+<view><image src="../images/icon/Rectangle1.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 95rpx"/></view>
+
+<view><image src="../images/icon/calendar.png" style="position:absolute; width: 40rpx; height: 40rpx;right: 30rpx; top: 99rpx"/></view>
+
+<image src="../images/icon/Rectangle2.png" style="position:relative; width: 690rpx; height: 250rpx; top: 180rpx; z-index:1;left: 30rpx;"/>
+
+<weekCalendar timeBean="{{timeBean}}" bind:lastWeek="lastWeek" bind:nextWeek="nextWeek" bind:dayClick="dayClick" class="daySelecter"></weekCalendar>
+
+<view class="text1">喂养时间</view>
+
+<view class="container2">
+  <view class="picture"><image src="../images/icon/mom.png" style=" width: 100rpx; height: 100rpx;margin-left: 20rpx; margin-top: 20rpx"/>
+  </view>
+  <view style="display: flex;flex-direction: column;">
+    <image src="../images/icon/alarm.png" style="width: 60rpx;height: 60rpx;margin-left: 100rpx;margin-top: 30rpx;"/>
+    <image src="../images/icon/Vector.png" style="width: 55rpx;height: 55rpx;margin-left: 100rpx;margin-top:25rpx;"/>
+  </view>
+  <view style="display: flex;flex-direction: column;">
+    <view style="margin-left: 40rpx; margin-top: 30rpx; color: #ECBF2E;font-size: 40rpx;">9pm</view>
+    <view style="margin-left: 40rpx; margin-top: 33rpx; color: #ECBF2E;font-size: 30rpx;">150ml</view>
+    <view style="font-size: 25rpx;margin-left: -60rpx;margin-top: 25rpx;color:grey;">上一次喂食时间：6pm</view>
+  </view>
+</view>
+
+<view class="text2">母乳保存期限</view>
+<view class="add" bindtap="addMilk">
+  <view class="text3">添加</view>
+  <image src="../images/icon/add.png" style="position:absolute; width: 55rpx;height: 55rpx;left: 630rpx;top:838rpx;"/>
+</view>
+
+<view class="container3">
+  <view class="feeder"><image src="../images/icon/bottle.png" style=" width: 85rpx; height: 85rpx;margin-left: 26rpx; margin-top: 25rpx"/>
+  </view>
+  <view style="display: flex;flex-direction: column;justify-content: center;margin-left: 50rpx;">
+    <view style="margin-bottom: 10rpx;font-size: 25px;color: ivory;font-weight: bolder;">4天后过期</view>
+    <view style="font-weight: bolder;">25/6/2022 19:00pm</view>
+  </view>
+</view>
+
+<button id="nutrientIntake"  disabled="{{isDisabled}}">营养摄取</button>
+
+
