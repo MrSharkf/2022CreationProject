@@ -2,18 +2,15 @@
 <view class="title">
     <view class="titleText">个人信息</view>
 </view>
-<view class="head">
+<view class="infobox">
+  <image class= "avatar" mode="aspectFit" src='{{userInfo.avatarUrl}}'wx:if="{{userInfo}}">
+  </image>
+  <view class="head" wx:else></view>
 </view>
-<!-- 用户信息 -->
-<view class='user-info-container'>
-  <image class='avatar' src='{{userInfo.avatarUrl}}' mode='aspectFit'></image>
-  <view class='info'>
-    <view class='name' wx:if="{{userInfo}}">{{userInfo.nickName}}，</view>
-    <button class="authorize" open-type="getUserInfo" bindgetuserinfo="onAuthorize" wx:else>
-      授权登录
-    </button>
-  </view>
-</view>
+
+  
+
+
 
 <view class="tableContainer">
   <view class="profileView">
@@ -45,4 +42,4 @@
 </view>
 </view>
 
-<button bindtap="register" class="login">注册</button>
+<button bindtap="register" class="login">登入信息</button>

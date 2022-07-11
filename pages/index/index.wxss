@@ -22,7 +22,7 @@
 }
 
 .info {
-  margin-left: 24rpx;
+  margin-left: 20%;
   color: black;
   font-weight: bold;
   font-size: 36rpx;

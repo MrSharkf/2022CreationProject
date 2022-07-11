@@ -1,0 +1,10 @@
+<!--pages/recipe/recipe.wxml-->
+
+<view class="title">推荐食谱</view>
+<view class="buttongroup">
+  <image class="button1" src="/image/Group 1.png"></image>
+  <image class="button2" src="/image"></image>
+  <image class="button3" src="/image"></image>
+  <image class="button4" src="/image"></image>
+</view>
+
