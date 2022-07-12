@@ -10,7 +10,14 @@ Page({
     switchChecked:false,
     date:'2022-07-01',
     time1:'00:00',
-    time2:'00:00'
+    time2:'00:00',
+    recordData:{
+      title:null,
+      date:null,
+      begin:null,
+      end:null,
+      volume:null
+    }
   },
   bindTimeChange1: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -86,5 +93,17 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  navigateback()
+  {
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
+  setTitle(e)
+  {
+    this.setData({
+      title:e.detail.
+    })
   }
 })

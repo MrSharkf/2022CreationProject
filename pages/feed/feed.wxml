@@ -29,8 +29,8 @@
 </view>
 
 <view class="text2">母乳保存期限</view>
-<view class="add" bindtap="addMilk">
-  <view class="text3">添加</view>
+<view class="add">
+  <view class="text3" bindtap="addmilk">添加</view>
   <image src="../images/icon/add.png" style="position:absolute; width: 55rpx;height: 55rpx;left: 630rpx;top:838rpx;"/>
 </view>
 

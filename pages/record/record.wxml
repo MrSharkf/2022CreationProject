@@ -1,5 +1,5 @@
 <!--pages/record/record.wxml-->
-<view><image src="../images/icon/leftarrow.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/></view>
+<view><image src="../images/icon/leftarrow.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx" bindtap="navigateback"/></view>
 
 <view><image src="../images/icon/search.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
 
@@ -12,7 +12,7 @@
 </view>
 
 <view>
-  <input class="inputTitle"/>
+  <input class="inputTitle" bindinput="setTitle"/>
 </view>
 
 <view class="date">
@@ -26,7 +26,7 @@
 </view>
 
 <view class="begin">
-  <view>开始时间</view>
+  <view>存入时间</view>
 </view>
 
 <view>
@@ -36,7 +36,7 @@
 </view>
 
 <view class="end">
-  <view>结束时间</view>
+  <view>过期时间</view>
 </view>
 
 <view>

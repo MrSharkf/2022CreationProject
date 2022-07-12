@@ -61,7 +61,7 @@ line-height: 24px;
 .text3{
   position: absolute;
   width: 100%;
-  height: 24rpx;
+  height: 60rpx;
   left: 550rpx;
   top: 840rpx;
   font-family: 'Inter';

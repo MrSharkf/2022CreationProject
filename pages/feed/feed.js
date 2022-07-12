@@ -116,5 +116,11 @@ dayClick:function(e){
    */
   onShareAppMessage() {
 
+  },
+  addmilk()
+  {
+    wx.navigateTo({
+      url: '../record/record',
+    })
   }
 })
