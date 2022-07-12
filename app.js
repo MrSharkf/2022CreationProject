@@ -1,3 +1,6 @@
+
+
+=======
 import { CLOUD_ENV_ID } from './config'
 
 App({
@@ -21,5 +24,6 @@ App({
       pauseDate: 0,
       pauseDuration: 0
     }
+
   }
 })
