@@ -103,7 +103,7 @@ Page({
   setTitle(e)
   {
     this.setData({
-      title:e.detail.
+      title:e.detail.value
     })
   }
 })
