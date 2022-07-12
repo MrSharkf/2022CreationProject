@@ -1,0 +1,1 @@
+export const CLOUD_ENV_ID = 'diet-analizer-3gxhs7f407661d7c'  // 云开发环境ID
