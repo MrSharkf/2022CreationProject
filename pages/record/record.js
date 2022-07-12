@@ -6,6 +6,7 @@ Page({
    */
   data: {
     disabled:true,
+    isDisabled:true,
     btnstate:"default",
     switchChecked:false,
     date:'2022-07-01',
@@ -14,8 +15,8 @@ Page({
     recordData:{
       title:null,
       date:null,
-      begin:null,
-      end:null,
+      begintime:null,
+      endtime:null,
       volume:null
     }
   },
@@ -24,6 +25,11 @@ Page({
     this.setData({
       time1: e.detail.value
     })
+    this.setData({
+      recordData:{
+        begintime:this.data.time1
+      }
+    })
   },
   
   bindTimeChange2: function(e) {
@@ -31,12 +37,22 @@ Page({
     this.setData({
       time2: e.detail.value
     })
+    this.setData({
+      recordData:{
+        endtime:this.data.time2
+      }
+    })
   },
 
   bindDateChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       date: e.detail.value
+    })
+    this.setData({
+      recordData:{
+        date:this.data.date
+      }
     })
   },
   /**
@@ -103,7 +119,29 @@ Page({
   setTitle(e)
   {
     this.setData({
-      title:e.detail.value
+      recordData:{
+        title:e.detail.value
+      }
     })
+  },
+  setvolume(e)
+  {
+    this.setData({
+      recordData:{
+        volume:e.detail.value
+      }
+    })
+  },
+  recordconfirm(e)
+  {
+    if(this.data.isDisabled)
+    {
+      wx.showToast({
+        title: '请完善信息！',
+        icon:"none"
+      })
+    }else{
+      
+    }
   }
 })

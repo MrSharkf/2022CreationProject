@@ -50,7 +50,7 @@
 </view>
 
 <view>
-  <input class="inputCapacity"/>
+  <input class="inputCapacity" bindinput="setvolume"/>
 </view>
 
-<button id="confirm"  disabled="{{isDisabled}}">确定</button>
+<button id="confirm"  disabled="{{isDisabled}}" bindtap="recordconfirm">确定</button>
