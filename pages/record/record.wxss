@@ -151,7 +151,13 @@ color: #ECBF2E;
 }
 /* 按钮不可用 */
 #confirm[disabled] {
+
   background: #BFCBD9;
   color: white ;
   border-color: #BFCBD9;
+  height: 90rpx;
+  width: 80% ;
+  font-size: 30rpx ;
+  top:1070rpx;
+  border-radius: 10px 10px 60px 60px;
 }

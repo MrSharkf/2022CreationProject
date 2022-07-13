@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<SearchInput></SearchInput>
+<!-- 监听自定义事件 -->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange" >
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="first_tab">  
+        <navigator class="goods_item_n" url="/pages/recipe_detail/index">
+          <button class="mine-nouserinfo-avatar" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="background-image:url(../../icons/Vector.png);"></button>
+            <!--容器 -->
+            <view class="goods_item">
+              <image class="goods_img1_wrap" mode="widthFix" src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF"></image></view>
+              <view class="goods_info1_wrap">name</view>
+              <view class="goods_info2_wrap">yingyangsu</view>
+          </navigator>
+          <navigator class="goods_item_n">
+          <button class="mine-nouserinfo-avatar"bindgetuserinfo="bindGetUserInfo" style="background-image:url(../../icons/Vector.png);"></button>
+            <!--容器 -->
+            <view class="goods_item">
+              <image class="goods_img1_wrap" mode="widthFix" src="https://s6.jpg.cm/2022/07/04/PW6CwS.png"></image></view>
+              <view class="goods_info1_wrap">name</view>
+              <view class="goods_info2_wrap">yingyangsu</view>
+          </navigator>
+          </view>
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">1</block>
+  <block wx:elif="{{tabs[2].isActive}}">2</block>
+  <block wx:elif="{{tabs[2].isActive}}">3</block>
+</Tabs>

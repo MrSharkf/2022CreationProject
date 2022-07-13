@@ -37,28 +37,22 @@
     },
     "disableUseStrict": false,
     "useCompilerPlugins": false,
-    "minifyWXML": true
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.12.0",
+  "libVersion": "2.24.6",
   "appid": "wxd011dce196be1c28",
   "projectname": "MyFirstApp",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
-
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-
-  "libVersion": "2.24.6",
   "packOptions": {
     "ignore": [],
     "include": []
   },
-  "appid": "wxd011dce196be1c28"
-
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
-
 }

@@ -1,16 +1,16 @@
 {
   "pages": [
-
     "pages/feed/feed",
+    "pages/recipe_list/index",
+    "pages/recipe_detail/index",
     "pages/recipe/recipe",
     "pages/profile/profile",
-    "pages/logs/logs",
     "pages/record/record"
     
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#D6D0AE",
+    "navigationBarBackgroundColor": "#ECBF2E",
     "navigationBarTitleText": " ",
 
     "navigationBarTextStyle": "white"

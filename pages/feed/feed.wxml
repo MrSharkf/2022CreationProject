@@ -33,14 +33,17 @@
   <view class="text3" bindtap="addmilk">添加</view>
   <image src="../images/icon/add.png" style="position:absolute; width: 55rpx;height: 55rpx;left: 630rpx;top:838rpx;"/>
 </view>
-
-<view class="container3">
+<view class="listscontainer">
+<view class="container3" bindlongpress="deletemilk" data-milk-id="{{item.registertime}}" wx:for="{{milkRecordList}}" wx:key="registertime">
   <view class="feeder"><image src="../images/icon/bottle.png" style=" width: 85rpx; height: 85rpx;margin-left: 26rpx; margin-top: 25rpx"/>
   </view>
   <view style="display: flex;flex-direction: column;justify-content: center;margin-left: 50rpx;">
-    <view style="margin-bottom: 10rpx;font-size: 25px;color: ivory;font-weight: bolder;">4天后过期</view>
-    <view style="font-weight: bolder;">25/6/2022 19:00pm</view>
+    <view style="margin-bottom: 0rpx;font-size: 20px;color: ivory;font-weight: bolder;">{{item.title}}  {{item.volume}}ml</view>
+    <view style="margin-bottom: 0rpx;font-size: 20px;color: red;font-weight: bolder;" wx:if="{{item.endtime=='已过期'}}">{{item.endtime}}</view>
+    <view style="margin-bottom: 0rpx;font-size: 20px;color: ivory;font-weight: bolder;" wx:else>{{item.endtime}}</view>
+    <view style="font-weight: bolder;">{{item.begintime}}</view>
   </view>
+</view>
 </view>
 
 <button id="nutrientIntake"  disabled="{{isDisabled}}">营养摄取</button>

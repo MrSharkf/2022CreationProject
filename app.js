@@ -1,6 +1,5 @@
 
 
-=======
 import { CLOUD_ENV_ID } from './config'
 
 App({
@@ -15,14 +14,7 @@ App({
     }
 
     this.data = {
-      timerId: -1,
-      timerState: TimerState.NONE,
-      goalId: '',
-      goalTitle: '',
-      duration: 0,
-      beginDate: 0,
-      pauseDate: 0,
-      pauseDuration: 0
+     
     }
 
   }

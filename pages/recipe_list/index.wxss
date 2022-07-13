@@ -1,0 +1,68 @@
+.first_tab{
+  display: flex;
+  margin-top:30rpx;
+  flex-wrap: wrap; /**自动换行***/
+}
+.first_tab .goods_item_n {
+  width: 47%;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: solid #C5C5C5 10rpx;
+  border-radius:20rpx;
+  margin-left:10rpx;
+  margin-right:10rpx;
+  margin-bottom:20rpx;
+}
+.goods_item_n > .mine-nouserinfo-avatar {
+  box-sizing: content-box;
+  width: 18rpx;
+  height:18rpx;
+    border-radius: 10%;
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-color: transparent;
+    left:38%;
+    top:4%
+  }
+
+.goods_item{
+  width: 100%;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  
+}
+.goods_img2_wrap{
+  width:100%;
+
+  position: relative;
+  left: 80%;
+  margin-top:0rpx;
+}
+.goods_img2_wrap image{
+  width:20%;}
+.goods_img1_wrap{
+  width:80%;
+  box-sizing: border-box;
+  border: solid #f5f0f0 8rpx;
+  border-radius: 50%;
+  overflow:hidden;
+}
+.goods_info1_wrap{
+  font-size: 70rpx;
+  width: 90%;
+  text-align:left;
+  background-color:aliceblue;
+}
+.goods_info2_wrap{
+  font-size: 40rpx;
+  width: 90%;
+  text-align:left;
+  color:antiquewhite;
+  background-color:rgba(178, 190, 6, 0.7);
+}
+
+

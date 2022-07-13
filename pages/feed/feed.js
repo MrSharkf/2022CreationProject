@@ -1,7 +1,8 @@
 // pages/feed/feed.js
 var util = require('../../utils/util.js')
 var util = require("../../utils/time-util.js");
-
+import { formatDate, formatDateTime, formatTime } from '../../utils/dateTimeUtil'
+import milkManageModel from '../../models/milkManage'
 Page({
 
   /**
@@ -10,6 +11,9 @@ Page({
   data: {
     selectWeek:0,
     timeBean:{},
+    milkRecordList:null,
+    formatstarttime:null,
+    formatexpiretime:null
   },
 
   /**
@@ -17,7 +21,23 @@ Page({
    */
  
   onLoad: function () {
-
+    milkManageModel.getMilkList().then(
+      res=>{
+        this.setData({
+          milkRecordList:this.formatRecordTime(res.result.data[0].milkRecord)
+        })
+        wx.showToast({
+          title: '获得母乳列表！',
+          icon:"success"
+        })
+      },
+      err=>{
+        wx.showToast({
+          title: '获取母乳列表失败！',
+          icon:"none"
+        })
+      }
+    )
 },
 
 lastWeek:function(e){   
@@ -80,7 +100,7 @@ dayClick:function(e){
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+   
   },
 
   /**
@@ -121,6 +141,61 @@ dayClick:function(e){
   {
     wx.navigateTo({
       url: '../record/record',
+    })
+  },
+  formatRecordTime(milklist)
+  {
+    milklist.forEach(record => {
+      record.begintime = formatDateTime(record.begintimeStamp),
+      record.endtime = this.expireJudge(record.endtimeStamp)
+    });
+    return milklist
+  },
+  expireJudge(timeStamp)
+  {
+    if(timeStamp<=Date.now()){
+      return '已过期'
+    }else{
+      if((timeStamp-Date.now())<24*3600*1000){
+        return `${Math.round((timeStamp-Date.now())/3600/1000)}小时后过期`
+      }else{
+        return `${Math.ceil((timeStamp-Date.now())/24/3600/1000)}天后过期`
+      }
+    }
+  },
+  deletemilk(e)
+  {
+    const { milkId } = e.currentTarget.dataset
+    wx.showModal({
+      cancelColor: '#FF0000',
+      content:'确定删除吗？',
+      success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          milkManageModel.deleteMilkRecord(milkId).then(
+            res => {
+              wx.showToast({
+                title: '删除成功！',
+                icon: 'success',
+                duration: 2000
+              })
+            },
+            wx.navigateBack({
+              delta: 1,
+           }),
+            err => {
+              console.log(err)
+              wx.showToast({
+                title: '删除失败',
+                icon:'none',
+                duration: 2000
+              })
+            }
+          )
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
     })
   }
 })
