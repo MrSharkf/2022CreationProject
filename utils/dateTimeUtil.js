@@ -5,7 +5,8 @@ export function formatDate(millisec) {
   const date = new Date(millisec)
   const month = date.getMonth() + 1
   const day = date.getDate()
-  return `${month}月${day}日`
+  const year= date.getFullYear()
+  return `${year}-${month}-${day}`
 }
 
 export function formatTime(millisec) {

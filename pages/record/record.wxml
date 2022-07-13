@@ -40,13 +40,12 @@
 </view>
 
 <view>
-  <picker name="pickertimeend" class="pickertimeend" mode="time" value="{{time2}}" start="00:00"
-  end="23:59" bindchange="bindTimeChange2">   {{time2}}
+  <picker name="pickertimeend" class="pickertimeend" mode="selector" value="{{duration}}" range="{{durationRange}}" bindchange="bindTimeChange2">   {{durationRange[duration]}}小时
   </picker>
 </view>
 
 <view class="capacity">
-  <view>容量</view>
+  <view>容量(ml)</view>
 </view>
 
 <view>
