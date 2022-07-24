@@ -1,0 +1,24 @@
+<!--pages/guide/index.wxml-->
+<view><image src="https://s6.jpg.cm/2022/07/14/P5Iwuy.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 40rpx"bindtap="naviBack"/></view>
+<view class="B"><text>喂养指南</text></view>
+
+<view class="A">
+  <navigator open-type="navigate" url="/pages/guide_detail/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5A8z5.png"></image>
+  </navigator>
+  <navigator open-type="navigate" url="/pages/guide_detail/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5AQei.png"></image>
+  </navigator>
+  <navigator open-type="navigate" url="/pages/guide_detail/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5AVJr.png"></image>
+  </navigator>
+  <navigator open-type="navigate" url="/pages/guide_detail/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5A6Wy.png"></image>
+  </navigator>
+  <navigator open-type="navigate" url="/pages/guide_detail/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5Aehe.png"></image>
+  </navigator>
+  <navigator open-type="navigate" url="/pages/guide_detail/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5Adsk.png"></image>
+  </navigator>
+  </view>

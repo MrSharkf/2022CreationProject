@@ -1,0 +1,60 @@
+/* pages/TODOlist/TODOlist.wxss */
+.todolistcontainer{
+  width:100%;
+  margin-top:160rpx
+}
+.todolistcontainer > .todo{
+  margin:20rpx;
+  display: flex;
+}
+.check{
+  margin:auto;
+}
+.check > .button{
+  margin:auto;
+  border: 3px solid #A0A0A0;
+  border-radius: 20%;
+}
+
+.card{
+  display: flex;
+  border: 3px solid #A0A0A0;
+  border-radius: 15px;
+  height:160rpx;
+  width:480rpx;
+  margin-right: auto;
+  box-shadow:0rpx 4rpx 4rpx  rgba(0, 0, 0, 0.25);
+}
+.card > .image{
+  box-sizing: content-box;
+  width:60%;
+  height: 140rpx; 
+  margin-top:auto;
+  margin-bottom: auto;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 50%
+}
+.content{
+  position: relative;
+  box-sizing: content-box;
+  margin:auto;
+  width:600rpx;
+}
+.content > .dishName{
+  font-size: 30rpx;
+  color:#ECBF2E;
+  font-weight: 600;
+}
+.newtodo{
+  position:absolute;
+  left:360rpx;
+  top:37rpx;
+  margin:auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ECBF2E;
+}

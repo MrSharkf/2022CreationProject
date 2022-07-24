@@ -3,12 +3,15 @@ var util = require('../../utils/util.js')
 var util = require("../../utils/time-util.js");
 import { formatDate, formatDateTime, formatTime } from '../../utils/dateTimeUtil'
 import milkManageModel from '../../models/milkManage'
+import toDoListManager from '../../models/todolist'
+import recipeManager from '../../models/recipe'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    todolist:null,
     selectWeek:0,
     timeBean:{},
     milkRecordList:null,
@@ -21,23 +24,8 @@ Page({
    */
  
   onLoad: function () {
-    milkManageModel.getMilkList().then(
-      res=>{
-        this.setData({
-          milkRecordList:this.formatRecordTime(res.result.data[0].milkRecord)
-        })
-        wx.showToast({
-          title: '获得母乳列表！',
-          icon:"success"
-        })
-      },
-      err=>{
-        wx.showToast({
-          title: '获取母乳列表失败！',
-          icon:"none"
-        })
-      }
-    )
+    this.getTodoList()
+    this.onShow()
 },
 
 lastWeek:function(e){   
@@ -100,7 +88,20 @@ dayClick:function(e){
    * 生命周期函数--监听页面显示
    */
   onShow() {
-   
+    milkManageModel.getMilkList().then(
+      res=>{
+        this.setData({
+          milkRecordList:this.formatRecordTime(res.result.data[0].milkRecord)
+        })
+
+      },
+      err=>{
+        wx.showToast({
+          title: '获取母乳列表失败！',
+          icon:"none"
+        })
+      }
+    )
   },
 
   /**
@@ -121,7 +122,7 @@ dayClick:function(e){
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    this.onShow()
   },
 
   /**
@@ -180,9 +181,6 @@ dayClick:function(e){
                 duration: 2000
               })
             },
-            wx.navigateBack({
-              delta: 1,
-           }),
             err => {
               console.log(err)
               wx.showToast({
@@ -196,6 +194,61 @@ dayClick:function(e){
           console.log('用户点击取消')
         }
       }
+    })
+    this.onShow()
+  },
+  getTodoList(){
+    toDoListManager.getTodoList().then(
+      res =>{
+        this.setData({
+          todolist:res.result.data[0].todoList
+        })
+        this.formattodoList(this.data.todolist)
+        wx.showToast({
+          title: '获取列表成功！',
+          icon:'none',
+          duration: 2000
+        })
+      },
+      err =>{
+          console.log(err)
+          wx.showToast({
+            title: '获取列表失败',
+            icon:'none',
+            duration: 2000
+          })
+      }
+    )
+  },
+  formattodoList(todolist){
+      todolist.forEach(item=>{
+        recipeManager.searchRecipe(item.itemid).then(
+          res =>{
+              item.img = res.result.data[0].img,
+              item.itemname = res.result.data[0].name
+              this.setData({
+                todolist:todolist
+              })
+          },
+          err =>{
+            console.log(err)
+          }
+        )
+      })
+  },
+  naviTodoList(){
+    wx.navigateTo({
+      url: '../TODOlist/TODOlist',
+    })
+  },
+  naviToMenu(){
+    wx.reLaunch({
+      url: '../index/index',
+    })
+  },
+  naviToRecipe(){
+    wx.navigateTo({
+      url: '../recipe_list/index',
     })
   }
 })

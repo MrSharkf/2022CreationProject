@@ -1,0 +1,21 @@
+<!--pages/answer/answer.wxml-->
+<view><image src="../images/icon/menu.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/></view>
+
+<view style="position:absolute; left:130rpx;top: 20rpx; font-size: 40rpx;">回答</view>
+
+<view><image src="../images/icon/search.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
+
+<view style="position: absolute; left: 120rpx; top: 120rpx;color: #ECBF2E; font-size: 37rpx; font-weight: 600;">孩子不愿意吃辅食怎么办？</view>
+
+<image src="../images/icon/leftarrow.png" style="position:absolute; width: 55rpx; height: 55rpx; left: 30rpx; top: 120rpx" bindtap="navigate1"/>
+
+<view class="answerContainer">
+  <view style="position: absolute; left:50rpx; color: #ECBF2E; top:20rpx; font-size: 33rpx;">编辑文本</view>
+  <view style="position: absolute; top:90rpx; left: 50rpx; right: 50rpx; font-size: 33rpx; letter-spacing: 0.04em; color: #696969;">   加辅食的过程应该是从少到多，从一种到多种，比较循序渐进的过程，如果加得过急，会造成孩子消化功能的异常，孩子可能会出现腹胀消化不好，那就让孩子出现了讨厌吃辅食的情况。所以在加辅食的时候一定要科学的增加，坚持从少到多，从一种到多种，从细到粗，从软到硬的过程，不要自己随意的增加，会导致孩子出现厌食的情况。</view>
+</view>
+
+<view><image src="../images/baby.png" style="position:absolute; width: 250rpx; height: 250rpx;right: 240rpx; top: 730rpx"/></view>
+
+<button class="issue">发布</button>
+
+<button class="save">保存</button>

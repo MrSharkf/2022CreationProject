@@ -1,0 +1,20 @@
+<!--pages/ask/ask.wxml-->
+<view><image src="../images/icon/menu.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/></view>
+
+<view style="position:absolute; left:130rpx;top: 20rpx; font-size: 40rpx;">提问</view>
+
+<view><image src="../images/icon/search.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
+
+<view style="margin-top: 150rpx; margin-left: 60rpx;color: #969696;">简要描述</view>
+
+<input style="background: #DBDBDB; border-radius: 15px;width: 85%; height:100rpx;margin-left: 50rpx; margin-top:20rpx;"/>
+
+<view style="margin-top: 50rpx; margin-left: 60rpx;color: #969696;">详情</view>
+
+<input style="background: #DBDBDB; border-radius: 15px;width: 85%; height:300rpx;margin-left: 50rpx; margin-top:20rpx;"/>
+
+<view style="margin-top: 50rpx; margin-left: 60rpx;color: #969696;">添加图片</view>
+
+<view style="background-color: #DBDBDB; width: 33%; margin-left: 50rpx;border-radius: 15px;margin-top: 20rpx;"><image src="../images/icon/addpicture.png" style="width: 150rpx; height: 150rpx; margin-left: 50rpx;margin-top: 20rpx"/></view>
+
+<button id="issueQuestion" >发布问题</button>

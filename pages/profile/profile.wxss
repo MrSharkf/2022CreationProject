@@ -50,15 +50,14 @@ margin-top: 10px;
 }
 .infobox > .avatar
 {
-  box-sizing: border-box;
-  border-radius: 100%;
+  box-sizing:content-box;
+  border-radius: 50%;
   position: absolute;
   width: 142px;
   height: 142px;
-
+  overflow:hidden;
   transform: translate(-50%);
-  background-color: burlywood;
-  border: 5px solid #FFFFFF;
+
 }
 
 

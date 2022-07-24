@@ -1,0 +1,22 @@
+/* pages/ingredients/ingredients.wxss */
+.pageContainer{
+  min-height: 100vh;
+  background-color:#F1F1F1;
+}
+
+.title{
+  position: absolute;
+  top:0;
+  height:140rpx;
+  background-color: #ECBF2E;
+  width: 100%;
+  color:#fff;
+}
+
+.search{
+  position: absolute;
+  top:250rpx;
+  left:85rpx;
+  background-color:#ECBF2E ;
+  border-radius: 10px;
+}

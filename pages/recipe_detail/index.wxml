@@ -1,22 +1,19 @@
-<image class="image" mode="center" src="https://s6.jpg.cm/2022/07/12/Pn2S1W.png"></image>
-<text class="text1">紫薯紫米粥</text>
-<text class="text2" decode>
-维他命C\D ： 100mg
-钙铁锌 ： 3mg
-Omage 3 :60mg
-蛋白质 ：10mg
-纤维素 ： 100mg
+<image class="image" mode="center" src="{{recipeData.img}}"></image>
+<text class="text1">{{recipeData.name}}</text>
+<text class="text2" decode >
+卡路里：{{recipeData.nutrition.calories}}
+碳水化合物：{{recipeData.nutrition.carbohydrates}}
+蛋白质 ：{{recipeData.nutrition.protein}}
+脂肪：{{recipeData.nutrition.fat}}
+钙：{{recipeData.nutrition.Ca}}
+铁：{{recipeData.nutrition.Fe}}
 </text>
-<text class="text3">食谱</text>
-<text class="text4" decode>
-主料：胚芽米 40g、小米10g
-辅料：紫薯1个
-</text>
+<view class="cook">
 <view class="component">
 <image class="image1" mode="widthFix" src="https://s6.jpg.cm/2022/07/12/Pn259t.png"></image>
 <view class="text"><text class="text5">烹调方式</text>
 <text class="text6" decode>
-简单 煮
+  {{recipeData.method}}
 </text>
 </view>
 </view>
@@ -24,8 +21,25 @@ Omage 3 :60mg
 <image class="image1" mode="widthFix" src="https://s6.jpg.cm/2022/07/12/Pn2nkC.png"></image>
 <view class="text"><text class="text5">烹调时间</text>
 <text class="text6" decode>
-1小时
+  {{recipeData.time}}
 </text>
+</view>
+</view>
+</view>
 
+
+<view class="ingredients">
+<text class="text3">材料</text>
+<text class="text4">
+主料：</text>
+<text class="text4"  wx:for="{{recipeData.main}}">{{item.name}}:{{item.mass}}  </text>
+<text class="text4">
+辅料：</text>
+<text class="text4"  wx:for="{{recipeData.subside}}">{{item.name}}:{{item.mass}}  </text>
+<text class="text3">
+做法</text>
+<text class="text5"  wx:for="{{recipeData.steps}}">
+{{item}}
+ </text>
 </view>
-</view>
+<button class="nutrientIntake" bindtap="addToList">添加到列表</button>

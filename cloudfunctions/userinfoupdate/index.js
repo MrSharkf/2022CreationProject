@@ -9,7 +9,7 @@ const _ = db.command
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   const openId = wxContext.OPENID
-  const { babyname, birthdate, gender, height, weight } = event
+  const { babyname, birthdate, gender, height, weight ,todo} = event
 
 
   const user = await db.collection('users')
@@ -21,6 +21,7 @@ exports.main = async (event, context) => {
 
 
   const idData = user.data[0]
+  if(todo=='update'){
   try {
     await db.collection('users')
     .where({
@@ -42,5 +43,17 @@ exports.main = async (event, context) => {
     console.log(e)
     return 'err'
   }
-
+  }
+  if(todo=='get'){
+    try {
+      return await db.collection('users')
+      .where({
+        _id: idData._id
+      })
+      .get()
+    } catch (e) {
+      console.log(e)
+      return 'err'
+    }
+  }
 }

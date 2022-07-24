@@ -1,0 +1,24 @@
+<!--pages/TODOlist/TODOlist.wxml-->
+<view><image src="../images/icon/menu.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/></view>
+
+<view><image src="../images/icon/search.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
+
+<view style="position:absolute; left:120rpx; top: 20rpx; font-size: 50rpx; font-weight: 700; color: rgba(0, 0, 0, 0.7);">每日食谱</view>
+<view class="newtodo" bindtap="addNewTodo">添加项目</view>
+
+<view class="todolistcontainer">
+<view class="todo"wx:for="{{todolist}}"bindlongpress="deleteitem" data-item-id="{{item.registertime}}">
+  <view class="check">
+    <checkbox class="button" color="green" checked="{{item.complete}}" bindtap="updateTodoItem">
+    </checkbox>
+  </view>
+  <view class="card" >
+    <image src="{{item.img}}" mode="aspectFill" class="image"/>
+    <view class="content">
+      <view class="dishName" >{{item.itemname}}</view>
+      <view class="time" style="font-size: 25rpx;margin-top: 8rpx;font-weight: 600;">{{item.time}}</view>
+      <view class="remark" style="color: #969696; font-size: 25rpx;margin-top: 8rpx;">{{item.remarks}}</view>
+    </view>
+  </view>
+</view>
+</view>

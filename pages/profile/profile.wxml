@@ -3,8 +3,9 @@
     <view class="titleText">个人信息</view>
 </view>
 <view class="infobox">
-  <image class= "avatar" mode="aspectFit" src='{{userInfo.avatarUrl}}'wx:if="{{userInfo}}">
-  </image>
+
+<view class="avatar"wx:if="{{userInfo}}"><open-data type="userAvatarUrl"></open-data>
+</view>
   <view class="head" wx:else></view>
 </view>
 

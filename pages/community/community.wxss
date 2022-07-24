@@ -1,0 +1,43 @@
+.title{
+  background-color: #ECBF2E;
+  height:90rpx;
+  color: #ffffff;
+  padding-left: 140rpx;
+  font-size: 42rpx;
+  padding-top: 20rpx;
+  font-weight: 600;
+}
+.subtitle{
+  display: flex;
+  height: 100rpx;
+  background-color:  rgba(236, 191, 46, 0.3);
+}
+
+.underline{
+  height: 0px;
+  width: 130rpx;
+  border: 4px solid #ECBF2E;
+  margin-left: 100rpx;
+  margin-top: 10rpx;
+}
+
+.splitLine{
+  border-bottom: 2px solid #969696;
+  height:0;
+  margin-left:50rpx;
+  margin-right: 50rpx;
+  margin-top: 20rpx;
+}
+
+#goAsk{
+  position: absolute;
+  height: 90rpx;
+  width: 80% ;
+  color: white;
+  font-size: 30rpx ;
+  top:1300rpx;
+  left:75rpx;
+  border-radius: 10px 10px 60px 60px;
+  background-color: #ECBF2E ;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}

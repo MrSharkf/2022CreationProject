@@ -1,0 +1,58 @@
+<view><image src="../images/icon/menu.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/></view>
+
+<view><image src="../images/icon/search.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
+
+<view class="title">社区讨论</view>
+
+<view class="subtitle">
+  <view style="color: #969696; font-size: 35rpx;margin-top: 25rpx; margin-left:65rpx;">母乳喂养</view>
+  <view class="chosenSubtitle">
+  <view style="color: #ECBF2E; font-size: 35rpx;margin-top: 25rpx; margin-left:105rpx;">辅食添加</view>
+  <view class="underline"></view>
+  </view>
+  <view style="color: #969696; font-size: 35rpx;margin-top: 25rpx; margin-left:105rpx;">生长发育</view>
+</view>
+
+<view>
+  <view class="content1" style="display: flex;">
+    <view bindtap="navigate1">   
+      <view style="font-size: 35rpx; color: #ECBF2E; margin-top: 30rpx; margin-left:60rpx;">孩子不愿意吃辅食怎么办？</view>
+      <view style="font-size: 30rpx; color:#969696;margin-left: 60rpx; margin-top: 20rpx; margin-right: 20rpx;">加辅食的过程应该是从少到多，从一种到多种，比较循序渐进的过程，如果加得过急…</view>
+    </view>
+    <view>
+      <image src="../images/baby.png" style="width: 150rpx; height: 130rpx; margin-left: 0rpx;margin-top: 60rpx; margin-right: 30rpx;"/>
+    </view>
+  </view>
+  <view class="splitLine"></view>
+</view>
+
+<view>
+<view class="content2" style="display: flex;">
+  <view>   
+    <view style="font-size: 35rpx; color: #ECBF2E; margin-top: 30rpx; margin-left:60rpx;">10个月大的孩子如何选择辅食？</view>
+    <view style="font-size: 30rpx; color:#969696;margin-left: 60rpx; margin-top: 20rpx; margin-right: 20rpx;">十个月的宝宝能够吃大部分食物了,此时应以饭食为三餐主食,在早餐、午餐和晚餐二小时后…</view>
+  </view>  
+  <view>
+    <image src="../images/apple.png" style="width: 150rpx; height: 130rpx; margin-left: 0rpx;margin-top: 60rpx; margin-right: 30rpx;"/>
+  </view>
+</view>
+<view class="splitLine"></view>
+</view>
+
+<view class="content3">
+  <view>   
+    <view style="font-size: 35rpx; color: #ECBF2E; margin-top: 30rpx; margin-left:60rpx;">辅食添加顺序是怎样的？</view>
+    <view style="font-size: 30rpx; color:#969696;margin-left: 60rpx; margin-top: 20rpx; margin-right: 60rpx;">1、先从低过敏、淡口味的食物开始尝试。2、一次只喂食一种新的食物，而且从少量开始喂起，食物的浓度也应该…</view>
+  </view>
+  <view class="splitLine"></view>
+</view>
+
+<view class="content4">
+  <view>   
+    <view style="font-size: 35rpx; color: #ECBF2E; margin-top: 30rpx; margin-left:60rpx;">孩子多大可以开始添加肉泥？</view>
+    <view style="font-size: 30rpx; color:#969696;margin-left: 60rpx; margin-top: 20rpx; margin-right: 60rpx;">六个月可以吃鱼泥和肉泥 。在国外6个月以上的宝宝的罐头已经有鸡肉和牛肉的 辅食 了。 但是开始的时候不要多, 毕竟宝宝的消化系统还比较弱。 可以加…</view>
+  </view>
+  <view class="splitLine"></view>
+</view>
+
+<button id="goAsk" bindtap="navigate2">去提问</button>

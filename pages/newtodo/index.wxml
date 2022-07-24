@@ -1,0 +1,58 @@
+<!--pages/record/record.wxml-->
+<view>
+  <navigator open-type="navigateBack">
+    <image src="https://s6.jpg.cm/2022/07/14/P5If8C.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/>
+  </navigator>
+</view>
+
+<view><image src="https://s6.jpg.cm/2022/07/09/PnlWlX.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
+
+<view class="head">
+  <view>添加食谱</view>
+</view>
+
+
+<view class="title">
+  <view>食物</view>
+</view>
+
+<view>
+  <input class="inputTitle" bindtap="inputTitleAction" value="{{itemname}}"/>
+</view>
+
+<view class="date">
+  <view>日期</view>
+</view>
+
+<view>
+  <picker name="pickerdate" class="pickerdate" mode="date" value="{{date}}" start="2022-07-01"
+  end="2077-07-07" bindchange="bindDateChange">   {{date}}
+  </picker>
+</view>
+
+<view class="begin">
+  <view>开始时间</view>
+</view>
+
+<view>
+  <picker name="pickertimebegin" class="pickertimebegin" mode="time" value="{{time1}}" start="00:00"
+  end="23:59" bindchange="bindTimeChange1">   {{time1}}
+  </picker>
+</view>
+<view class="quantity">
+  <view>食量</view>
+</view>
+
+<view>
+  <input class="inputquantity" bindinput="inputquantityAction"/>
+</view>
+<view class="capacity">
+  <view>备注</view>
+</view>
+
+<view>
+  <input class="inputCapacity" bindinput="inputCapacityAction"/>
+</view>
+<view class="weui_cell_ft">
+  <button id="confirm" class="weuibutton" type="primary" bindtap='addtodoitem' disabled="{{isDisabled}}">确定</button>
+  </view>

@@ -1,0 +1,37 @@
+{
+  "id": "3499786",
+  "name": "膳食管理",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3865138",
+      "name": "数据报告",
+      "font_class": "shujubaogao",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "9073971",
+      "name": "2_5膳食健康",
+      "font_class": "_shanshijiankang",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "13594826",
+      "name": "用户线索智能推荐",
+      "font_class": "zhinengtuijian",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "15061951",
+      "name": "喂养用品",
+      "font_class": "weiyangyongpin",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    }
+  ]
+}

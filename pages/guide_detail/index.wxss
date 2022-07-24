@@ -1,0 +1,24 @@
+/* pages/guide_detail/index.wxss */
+.B{
+  position: absolute;
+  top: 40rpx;
+  width: 400rpx;
+  height: 10rpx;
+  left: 160rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  letter-spacing: 0.04em;
+  color: black;
+  }
+.A{
+  position: absolute;
+  width: 750rpx;top: 120rpx;
+  }
+  .A image{
+    width: 100%;
+  }
+  

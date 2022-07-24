@@ -1,0 +1,11 @@
+<!--pages/ingredients/ingredients.wxml-->
+<view class="pageContainer"></view>
+<view class="title">
+ <view style="position: absolute; left: 280rpx;  font-size: 40rpx; top:40rpx;">自定义食材</view>
+</view>
+<view class="search">
+  <searchbar
+  placeholder="查找食材"
+  bind:handleSearch="handleSearch"
+></searchbar>
+</view>

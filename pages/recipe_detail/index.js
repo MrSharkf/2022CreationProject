@@ -1,18 +1,37 @@
 // pages/goods_detail/index.js
+import recipeManager from '../../models/recipe'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    recipeData:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+  onLoad:function(options) {
+    this.setData({
+      recipeData:options.id
+    })
+    recipeManager.searchRecipe(this.data.recipeData).then(
+      res =>{
+        this.setData({
+          recipeData:this.formatRecipeShow(res.result.data[0])
+        })
+      },
+      err =>{
+        console.log(err)
+      }
+    )
 
+  },
+  formatRecipeShow(recipe){
+    var formatRecipe = recipe
+   
+    return formatRecipe
   },
 
   /**
@@ -62,5 +81,23 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+  addToList(){
+    wx.navigateTo({
+      url: `../newtodo/index?id=${this.data.recipeData._id}`,
+    }).then(
+      res=>{
+        wx.showToast({
+          title: '页面跳转成功',
+          icon:"none"
+      })
+    },
+      err=>{
+        wx.showToast({
+          title: '页面跳转失败',
+          icon:"none"
+        })
+      }
+    )
+  },
 })

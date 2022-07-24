@@ -3,26 +3,42 @@
 <!-- 监听自定义事件 -->
 <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange" >
   <block wx:if="{{tabs[0].isActive}}">
-    <view class="first_tab">  
-        <navigator class="goods_item_n" url="/pages/recipe_detail/index">
+    <view class="first_tab"wx:for="{{formatList}}">  
+        <navigator class="goods_item_n" bindtap="onRecipeClick"data-recipe-data="{{item.L._id}}">
           <button class="mine-nouserinfo-avatar" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="background-image:url(../../icons/Vector.png);"></button>
             <!--容器 -->
             <view class="goods_item">
-              <image class="goods_img1_wrap" mode="widthFix" src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF"></image></view>
-              <view class="goods_info1_wrap">name</view>
-              <view class="goods_info2_wrap">yingyangsu</view>
+              <image class="goods_img1_wrap" mode="widthfix" src="{{item.L.img}}"></image></view>
+              <view class="goods_info1_wrap">{{item.L.name}}</view>
+              <view class="goods_info2_wrap">{{item.L.nutrition}}</view>
           </navigator>
-          <navigator class="goods_item_n">
+          <navigator class="goods_item_n"bindtap="onRecipeClick"data-recipe-data="{{item.R._id}}">
           <button class="mine-nouserinfo-avatar"bindgetuserinfo="bindGetUserInfo" style="background-image:url(../../icons/Vector.png);"></button>
             <!--容器 -->
             <view class="goods_item">
-              <image class="goods_img1_wrap" mode="widthFix" src="https://s6.jpg.cm/2022/07/04/PW6CwS.png"></image></view>
-              <view class="goods_info1_wrap">name</view>
-              <view class="goods_info2_wrap">yingyangsu</view>
+              <image class="goods_img1_wrap" mode="widthfix" src="{{item.R.img}}"></image></view>
+              <view class="goods_info1_wrap">{{item.R.name}}</view>
+              <view class="goods_info2_wrap">{{item.R.nutrition}}</view>
           </navigator>
           </view>
   </block>
-  <block wx:elif="{{tabs[1].isActive}}">1</block>
+  <block wx:elif="{{tabs[1].isActive}}">
+  </block>
   <block wx:elif="{{tabs[2].isActive}}">2</block>
-  <block wx:elif="{{tabs[2].isActive}}">3</block>
+
+  <block wx:elif="{{tabs[3].isActive}}">
+    <view class="listscontainer">
+<view class="container3" bindlongpress="deletemilk" bindtap="addmilkTodo" data-milk-id="{{item.registertime}}" wx:for="{{milkRecordList}}" wx:key="registertime">
+  <view class="feeder"><image src="../images/icon/bottle.png" style=" width: 85rpx; height: 85rpx;margin-left: 26rpx; margin-top: 25rpx"/>
+  </view>
+  <view style="display: flex;flex-direction: column;justify-content: center;margin-left: 50rpx;">
+    <view style="margin-bottom: 0rpx;font-size: 20px;color: ivory;font-weight: bolder;">{{item.title}}  {{item.volume}}ml</view>
+    <view style="margin-bottom: 0rpx;font-size: 20px;color: red;font-weight: bolder;" wx:if="{{item.endtime=='已过期'}}">{{item.endtime}}</view>
+    <view style="margin-bottom: 0rpx;font-size: 20px;color: ivory;font-weight: bolder;" wx:else>{{item.endtime}}</view>
+    <view style="font-weight: bolder;">{{item.begintime}}</view>
+  </view>
+</view>
+</view>
+  </block>
+
 </Tabs>

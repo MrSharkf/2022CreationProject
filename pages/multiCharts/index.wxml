@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view><image src="../images/icon/menu.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/></view>
+
+<view><image src="../images/icon/person.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
+
+<view style="position:absolute; left: 25rpx;top: 90rpx;font-size: 60rpx; font-weight: 700; ">您好，<open-data type="userNickName"></open-data>！</view>
+
+<view style="position:absolute; left: 40rpx;top: 175rpx;font-size: 30rpx;font-weight: 600; color: rgba(0, 0, 0, 0.8);">祝您有个快乐的一天</view>
+
+<view class="title">数据报告</view>
+
+<view class="container1">
+  <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas></view>
+<view class="container2">
+  <ec-canvas id="mychart-dom-multi-pie" canvas-id="mychart-multi-pie" ec="{{ ecPie }}"></ec-canvas>
+</view>
+<view class="container3">
+  <ec-canvas id="mychart-dom-multi-pie2" canvas-id="mychart-multi-pie" ec="{{ ecPie2 }}"></ec-canvas>
+</view>
+
+
+<view class="recommandDishes" bindtap="naviToRecipe">
+  <view style="position: absolute;top:10rpx;font-size:32rpx; left:20rpx; font-weight:600;color:#ECBF2E">推荐食谱</view>  
+  <image src="{{goodsList[0].img}}" class="image"/>
+  <view><image src="../images/icon/threedots.png" style="position: absolute;top:20rpx;right:20rpx; width:45rpx; height:30rpx;"/></view>
+  <view style="position:absolute; top:315rpx; font-size:27rpx; left:20rpx; font-weight:600;color:rgba(0, 0, 0, 0.74);">{{goodsList[0].name}}</view>
+  <view style="position:absolute; top:350rpx; font-size:24rpx; left:20rpx; font-weight:600;color:#B2BE06;">纤维素 100mg</view>
+  <view style="position:absolute; top:380rpx; font-size:24rpx; left:20rpx; font-weight:600;color:#ECBF2E;">蛋白质 85mg</view>  
+</view>
+
+<view class="tips">
+    <view class="letter"><image src="../images/icon/tips.png" style="margin-top:10rpx; margin-left:10rpx; width:80rpx; height:80rpx;"/></view>  
+  <view style="position: absolute; top:25rpx; left:160rpx;font-weight: 600;">温馨提醒</view>
+  <view class="tip1">宝宝纤维素摄入量可能还不足!</view>
+  <view class="tip2">宝宝蛋白质摄入量可能还不足!</view>    
+  </view>

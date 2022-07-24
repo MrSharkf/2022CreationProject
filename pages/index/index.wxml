@@ -1,0 +1,43 @@
+<view  class="OO" mode="widthFix"></view>
+<image class="O" mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5lMee.png" ></image>
+<view  class="I" mode="widthFix"></view>
+<view class="userinfo">
+  <view class="userinfo-avatar"><open-data type="userAvatarUrl"></open-data></view>
+<view class="userinfo-name"><open-data type="userNickName"></open-data></view>
+</view>
+<view class="littleimage">
+<image class="littleimage1" mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5VQow.png" ></image>
+<image class="littleimage2" mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5VdD8.png" bindtap="naviToCustom"></image>
+<image class="littleimage3" mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5Vl6i.png" bindtap="naviToProfile"></image>
+</view>
+<view class="A">
+  <navigator open-type="navigate"
+    url="/pages/guide/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5lxak.png"></image>
+    <text >喂养指南</text>
+  </navigator></view>
+<view  class="B">
+  <navigator open-type="navigate"
+    url="/pages/feed/feed">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5lyfO.png" ></image>
+    <text>母乳管理</text>
+  </navigator></view>
+<view  class="C">
+  <navigator open-type="navigate"
+    url="/pages/community/community">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5laX8.png" ></image>
+    <text>社区讨论</text>
+  </navigator></view>
+<view  class="D">
+  <navigator open-type="navigate"
+    url="/pages/recipe_list/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5l9Zw.png" ></image>
+    <text>推荐食谱</text>
+  </navigator></view>
+  <view  class="E">
+  <navigator open-type="navigate"
+    url="/pages/multiCharts/index">
+    <image mode="widthFix" src="https://s6.jpg.cm/2022/07/15/P5lipi.png" ></image>
+    <text>统计报告</text>
+  </navigator></view>
+    

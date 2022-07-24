@@ -1,0 +1,177 @@
+/* pages/record/record.wxss */
+.head{
+  position: absolute;
+  width: 100%;
+  height: 29rpx;
+  left: 45rpx;
+  top: 90rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  }
+  
+  .title{
+    position: absolute;
+  width: 57px;
+  height: 22px;
+  left: 50rpx;
+  top: 200rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38rpx;
+  line-height: 24px;
+  color: #ECBF2E;
+  }
+  
+  .inputTitle{
+    position: absolute;
+    left: 50rpx;
+    right:50rpx;
+    border-bottom: 1.5px solid gray;
+    top: 270rpx;
+  }
+  
+  .date{
+    position: absolute;
+  width: 65px;
+  height: 22px;
+  left: 50rpx;
+  top: 380rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38rpx;
+  line-height: 24px;
+  color: #ECBF2E;
+  
+  }
+  
+  .pickerdate{
+    position: absolute;
+    align-items: center;
+    top: 460rpx;
+    left:50rpx;
+    font-size: 33rpx;
+    font-weight: 700;
+  }
+  
+  .begin{
+    position: absolute;
+  width: 200rpx;
+  height: 24px;
+  left: 50rpx;
+  top: 550rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34rpx;
+  line-height: 24px;
+  color: #ECBF2E;
+  }
+  
+  .pickertimebegin{
+  position: absolute;
+  width: 133px;
+  height: 22px;
+  left: 50rpx;
+  top: 640rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33rpx;
+  line-height: 17px;
+  color: #000000;
+  letter-spacing:10rpx;
+  }
+  
+  .end{
+    position: absolute;
+  width: 91px;
+  height: 22px;
+  left: 450rpx;
+  top: 620rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34rpx;
+  line-height: 24px;
+  color: #ECBF2E;
+  }
+  
+  .pickertimeend{
+    position: absolute;
+  width: 133px;
+  height: 22px;
+  left: 450rpx;
+  top: 720rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33rpx;
+  line-height: 17px;
+  color: #000000;
+  letter-spacing:10rpx;
+  }
+  
+  .capacity{
+    position: absolute;
+  width: 80rpx;
+  height: 24rpx;
+  left: 50rpx;
+  top: 860rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38rpx;
+  line-height: 24px;
+  color: #ECBF2E;
+  }
+  
+  .inputCapacity{
+    position: absolute;
+    left: 50rpx;
+    right:50rpx;
+    border-bottom: 1.5px solid gray;
+    top: 800rpx;
+  }
+  .quantity{
+  position: absolute;
+  width: 80rpx;
+  height: 24rpx;
+  left: 50rpx;
+  top: 720rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38rpx;
+  line-height: 24rpx;
+  color: #ECBF2E;
+  }
+  
+  .inputquantity{
+    position: absolute;
+    left: 50rpx;
+    right:50rpx;
+    border-bottom: 1.5px solid gray;
+    top: 940rpx;
+  }
+  /* 按钮可用 */
+  #confirm{
+    height: 90rpx;
+    width: 80% ;
+    color: white;
+    font-size: 30rpx ;
+    top:1070rpx;
+    border-radius: 10px 10px 60px 60px;
+    background-color: #ECBF2E ;
+  }
+  /* 按钮不可用 */
+  #confirm[disabled] {
+    background: #BFCBD9;
+    color: white ;
+    border-color: #BFCBD9;
+  }
