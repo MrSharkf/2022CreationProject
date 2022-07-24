@@ -2,6 +2,7 @@
 
 
 import BodydataModel from '../../models/bodydata'
+import HomeModel from '../../models/home'
 
 
 Page({
@@ -30,6 +31,7 @@ Page({
         this.setData({
           userInfo:res.userInfo
         })
+        this.onShow()
       },
       fail: err => {
         wx.showToast({
@@ -53,7 +55,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    
+    wx.getUserInfo({
+      success: res=>{
+        this.setData({
+          userInfo:res.userInfo
+        })
+        this.onShow()
+      },
+      fail: err => {
+        wx.showToast({
+          title: err,
+          duration:2000
+        })
+      }
+    })
   },
 
   /**
@@ -125,27 +140,38 @@ Page({
 
   register(){
    if(this.data.babyname&&this.data.birthdate&&this.data.gender&&this.data.height&&this.data.weight){
-      BodydataModel.updateUserInfo(this.data.babyname, 
-        this.data.birthdate, 
-        this.data.gender, 
-        this.data.height, 
-        this.data.weight).then(
-          res => {
-            wx.showToast({
-              title: '修改成功！',
-              icon: 'success',
-              duration: 2000
-            })
-          },
-          err => {
-            console.log(err)
-            wx.showToast({
-              title: '修改失败',
-              icon:'none',
-              duration: 2000
-            })
-          }
-        )
+      HomeModel.addUserId().then(
+        res=>{
+          BodydataModel.updateUserInfo(this.data.babyname, 
+            this.data.birthdate, 
+            this.data.gender, 
+            this.data.height, 
+            this.data.weight).then(
+              res => {
+                wx.navigateBack({
+                  delta: 1,
+                }).then(
+                  res=>{
+                    wx.showToast({
+                      title: '修改成功！',
+                      icon: 'success',
+                      duration: 2000
+                    })
+                  }
+                )
+              },
+              err => {
+                console.log(err)
+                wx.showToast({
+                  title: '修改失败',
+                  icon:'none',
+                  duration: 2000
+                })
+              }
+            )
+        }
+      )
+     
    }else{
       wx.showToast({
         title:'请完善宝宝信息！',

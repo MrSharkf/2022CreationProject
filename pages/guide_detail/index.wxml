@@ -1,0 +1,7 @@
+<!--pages/guide_detail/index.wxml-->
+<view><image src="https://s6.jpg.cm/2022/07/14/P5Iwuy.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 40rpx"bindtap="naviBack"/></view>
+<view class="B"><text>0-6月龄喂养指南</text></view>
+
+<view class="A">
+  <image mode="widthFix" src="/image/instruction0-6m.png"></image>
+</view>

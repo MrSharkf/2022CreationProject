@@ -1,0 +1,89 @@
+.title{
+  font-size: 36rpx;
+  font-weight: 500;
+  color:#ECBF2E;
+  margin-top:225rpx;
+  margin-left: 40rpx;
+  border-radius: 10px;
+  border: 1.7px solid #E5E5E5;
+  width:157rpx;
+  padding-left: 20rpx;
+  padding-bottom: 6rpx;
+  padding-top: 6rpx;
+}
+
+#mychart-dom-multi-bar {
+  position: absolute;
+  top: 305rpx;
+  height:420rpx;
+  left: 25rpx;
+  right: 52%;
+  border:2px solid #B2BE06;
+  border-radius: 18px;
+}
+
+#mychart-dom-multi-pie {
+  position:absolute;
+  top: 305rpx;
+  height:420rpx;
+  left: 52%;
+  right: 25rpx;
+  border:2px solid #F0A06B;
+  border-radius: 18px;
+}
+
+#mychart-dom-multi-pie2{
+  border: 2px solid #E75820;
+  border-radius: 18px;
+  position:absolute;
+  top: 750rpx;
+  height:420rpx;
+  left: 25rpx;
+  right: 52%;
+}
+
+.recommandDishes{
+  border: 2px solid #C5C5C5;
+  border-radius: 18px;
+  position:absolute;
+  top: 750rpx;
+  height:420rpx;
+  left: 52%;
+  right: 25rpx;
+}
+.recommandDishes > .image{
+  position: relative;
+  width: 72%;
+  height: 58.5%;
+  margin-left:40rpx;
+  margin-top:45rpx;
+  border: solid #ECBF2E 10rpx;
+  border-radius: 50%;
+}
+
+
+.tips{
+  position: absolute;
+  left:25rpx;
+  top:1210rpx;
+  height:184rpx;
+  right:25rpx;
+  border-radius: 20px;
+  background-color: #F0A06B;
+}
+.letter{
+  border-radius: 100%;
+  background-color: #ffffff;
+  width:100rpx;
+  height:100rpx; 
+  margin-top: 42rpx;
+  margin-left: 30rpx;
+}
+
+.tip1{
+  position: absolute; top:65rpx; left:160rpx;font-weight: 500;color: #ffffff;font-size: 25rpx;
+}
+
+.tip2{
+  position: absolute; top:100rpx; left:160rpx;font-weight: 500;color: #ffffff;font-size: 25rpx;
+}

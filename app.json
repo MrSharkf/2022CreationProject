@@ -1,7 +1,18 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/feed/feed",
+    "pages/TODOlist/TODOlist",
+    "pages/multiCharts/index",
+    "pages/guide/index",
+    "pages/guide_detail/index",
+    "pages/newtodo/index",
+    "pages/community/community",
+    "pages/answer/answer",
+    "pages/ask/ask",
+    "pages/viewQuestions/viewQuestions",
     "pages/recipe_list/index",
+    "pages/ingredients/ingredients",
     "pages/recipe_detail/index",
     "pages/recipe/recipe",
     "pages/profile/profile",

@@ -12,7 +12,8 @@ export default class BodydataModel {
           birthdate, 
           gender, 
           height, 
-          weight
+          weight,
+          todo:'update'
       }
     })
   }

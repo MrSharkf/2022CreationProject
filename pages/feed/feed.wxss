@@ -38,7 +38,7 @@ line-height: 24px;
 
 .picture{
   border-radius: 100%;
-  border: 1.5px solid #ECBF2E;
+  border: 3px solid #ECBF2E;
   width: 150rpx; 
   height: 150rpx;
   margin-left: 30rpx; 
@@ -63,6 +63,19 @@ line-height: 24px;
   width: 100%;
   height: 60rpx;
   left: 550rpx;
+  top: 840rpx;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ECBF2E;
+}
+.text4{
+  position: absolute;
+  width: 100%;
+  height: 60rpx;
+  left: 300rpx;
   top: 840rpx;
   font-family: 'Inter';
   font-style: normal;

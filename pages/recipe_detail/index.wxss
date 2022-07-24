@@ -1,7 +1,8 @@
 /* pages/goods_detail/index.wxss */
 .image{
   box-sizing: border-box;
-  border-radius: 8%;
+  border-radius: 16%;
+  border: solid #ECBF2E 10rpx;
   width:100%;
   height: 600rpx;
 }
@@ -9,7 +10,7 @@
   position: relative;
   width: 300rpx;
   height: 36rpx;
-  left: 21rpx;
+  left: 35rpx;
   top: 0rpx;
   font-family: 'Poppins';
   font-style: normal;
@@ -24,70 +25,45 @@
 .text2{
 /* 维他命C、D： 钙铁锌： Omega 3： 蛋白质： 纤维素： */
 position: relative;
-left: 21rpx;
+left: 35rpx;
 top: 5rpx;
 bottom: 6.78%;
 font-family: 'Inter';
 font-style: normal;
-font-weight: 600;
-font-size: 14px;
+font-weight: 800;
+font-size: 16px;
 line-height: 17px;
 letter-spacing: 0.04em;
-color: #ECBF2E;
+color: #f0c022;
 }
-/* 食谱 */
-.text3{
-position: relative;
-width: 300rpx;
-left: 21rpx;
-top: 0rpx;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 27px;
-/* identical to box height */
-letter-spacing: 0.04em;
-color: #000000;
+
+
+.cook{
+  position: absolute;
+  top:700rpx;
+  left:50%;
 }
-.text4{
-position: relative;
-width: 188rpx;
-height: 63rpx;
-left: 21rpx;
-top: 0rpx;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 21px;
-letter-spacing: 0.04em;
-color: #000000;
-}
-.component {
+.cook > .component {
   display: flex;
 }
-.component .image1 {
-  flex: 1.5;
+.component >.image1 {
+
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-width: 188rpx;
-height: 63rpx;
-left: 21rpx;
-top: 10rpx;
+  margin:auto;
+  width: 100rpx;
+
 }
-.component .image1 image {
-  width: 100%;
-}
-.component .text {
+
+.component > .text {
   flex: 9;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.component .text .text5{
+.component >.text >.text5{
 position: relative;
 height:20rpx;
 left: 21rpx;
@@ -101,7 +77,7 @@ line-height: 27px;
 letter-spacing: 0.04em;
 color: #000000;
 }
-.component .text .text6{
+.component >.text >.text6{
   position: relative;
   left: 21rpx;
   top: 0rpx;
@@ -113,3 +89,44 @@ color: #000000;
   letter-spacing: 0.04em;
   color: #000000;
 }
+.ingredients{
+  position:relative;
+  margin: 40rpx;
+  width:90%
+  
+}
+.ingredients > .text4{
+
+  margin-top:10rpx;
+  font-weight: 400;
+  font-size: 14px;
+}
+.ingredients > .text5{
+  margin-top:10rpx;
+  font-weight: 400;
+  font-size: 14px;
+
+}
+  /* 食谱 */
+  .ingredients > .text3{
+  margin-top: 20rpx;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+  letter-spacing: 0.04em;
+  color: #000000;
+  }
+  .nutrientIntake{
+    height: 90rpx;
+    width: 400rpx ;
+    color: white;
+    font-size: 40rpx ;
+    font-weight:bold;
+    margin:auto;
+    margin-top: 25rpx;
+    border-radius: 10px 10px 40px 40px;
+    background-color: #ECBF2E ;
+  }

@@ -1,0 +1,36 @@
+<!--pages/viewQuestions/viewQuestions.wxml-->
+<view class="top">
+  <view><image src="../images/icon/menu.png" style="position:absolute; width: 50rpx; height: 50rpx; left: 25rpx;top: 20rpx"/></view>
+  <view style="position:absolute; left:130rpx;top: 20rpx; font-size: 40rpx;color: #fff;">查看问题</view>
+  <view><image src="../images/icon/search.png" style="position:absolute; width: 50rpx; height: 50rpx;right: 25rpx; top: 20rpx"/></view>
+</view>
+
+<view class="question">
+  <image src="../images/babyhead.png" style="position:absolute; width: 100rpx; height: 100rpx; left: 50rpx; top: 120rpx"/>
+  <view style="position:absolute; left: 200rpx; top: 150rpx; color:#fff; font-size: 33rpx; font-weight: 600;">孩子不愿意吃辅食怎么办？</view>
+  <view style="position:absolute; left: 110rpx; top: 240rpx; right:60rpx;color:#fff; font-size: 25rpx;letter-spacing: 0.04em;">孩子快8个月了，体重20，身高70，六个月以后开始断断续续增加辅食，每次都是吃了几口就不吃了，然后因为一些外在因素添加辅食进度有点慢，到目前只尝试了几种，有点焦虑了。</view>
+  <view></view>
+  <image src="../images/icon/leftarrow.png" style="position:absolute; width: 55rpx; height: 55rpx; left: 25rpx; top: 345rpx" bindtap="navigate1"/>
+</view>
+
+<view> 
+  <image src="../images/icon/medal.png" style="position:absolute; width: 50rpx; height: 70rpx; left: 80rpx; top: 420rpx"/>
+
+  <image src="../images/icon/star.png" style="position:absolute; width: 30rpx; height: 30rpx; left: 88rpx; top: 448rpx"/>
+
+  <view style="position:absolute; left:150rpx; top:440rpx; color:#969696; font-size:35rpx;">优质回答</view>
+
+  <image src="../images/answer1.png" style="position:absolute; left: 50rpx; top: 520rpx; height: 300rpx; width: 650rpx;"/>
+
+  <view style="position:absolute; left: 80rpx; right:80rpx; top: 630rpx; font-size: 24rpx;color: #969696; font-weight: 400;">有些孩子可能在开始添加辅食的最初，就表现出对辅食强烈的抗拒。这时候有可能是孩子并没有做好准备，建议先暂停辅食，至少等待一周以后再尝试，不要去强迫孩子添加辅食，以免从孩子开始加辅食，就有一个不愉快的记忆，导致孩子以后的长期厌食。</view>
+
+  <view class="ask" style="position: absolute; top:835rpx; right:100rpx;">追问</view>
+
+  <image src="../images/answer2.png" style="position:absolute; left: 50rpx; top: 900rpx; height: 300rpx; width: 650rpx;"/>  
+
+  <view style="position:absolute; left: 80rpx; right:80rpx; top: 1000rpx; font-size: 24rpx;color: #969696; font-weight: 400;">首先要知道孩子添加辅食，是从出生之后的纯乳类向固体食物转换重要的时期，也就是转乳期。最初随着孩子的吞咽能力以及咀嚼能力逐渐完善，以及消化功能发育的情况，开始吃一些泥状的食物。这个是非常重要的时期，它是有一个循序渐进的过程，再随着他的吞咽能力以及牙齿的萌出，消化功能完善逐渐开始变成末状食物，即已经碎的食物。</view>
+
+  <view class="ask" style="position: absolute; top:1220rpx; right:100rpx;">追问</view>
+</view>
+
+<button id="answer" bindtap="navigate2">回答</button>
